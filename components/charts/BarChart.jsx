@@ -1,6 +1,7 @@
 'use client'
-import Chart from 'react-apexcharts'
+import dynamic from 'next/dynamic'
 
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 const BarChart = ({ options, series, }) => {
     // options: {
     //   chart: {
@@ -16,11 +17,10 @@ const BarChart = ({ options, series, }) => {
     // }]
 
 
-if (typeof window === 'object') {
         return (
             <Chart options={options} series={series} type="bar" width={500} height={320} />
         )
-    }
+    
 
 }
 export default BarChart
