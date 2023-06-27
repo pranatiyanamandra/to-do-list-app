@@ -16,10 +16,11 @@ const BarChart = ({ options, series, }) => {
     // }]
 
 
-
-    return (
-        <Chart options={options} series={series} type="bar" width={500} height={320} />
-    )
+if (typeof window === 'object') {
+        return (
+            <Chart options={options} series={series} type="bar" width={500} height={320} />
+        )
+    }
 
 }
 export default BarChart
