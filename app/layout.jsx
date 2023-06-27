@@ -1,5 +1,5 @@
 import Provider from '@components/Provider'
-import Nav from '@components/nav'
+import Nav from '@components/Nav'
 import '@styles/globals.css'
 export const metadata = {
   title: "Pomodoro Based To-Do Application",
